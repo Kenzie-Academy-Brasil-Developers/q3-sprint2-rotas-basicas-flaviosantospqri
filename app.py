@@ -11,9 +11,9 @@ def home():
 def current():
     datetimeHour = datetime.now().strftime("%d/%m/%Y %H:%M:%S %p")
     hour = datetime.now().hour
-    if int(hour) <= 12:
+    if int(hour) < 12:
         message = 'Bom dia!' 
-    elif int(hour) >= 12 and int(hour) <= 18:
+    elif int(hour) > 12 and int(hour) < 18:
         message = 'Boa tarde!'
     else:
         message = 'Boa noite!'     
